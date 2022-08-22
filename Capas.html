@@ -1,0 +1,64 @@
+<div class="contenedor">
+
+<div class="cuadro">Lorem ipsum dolor sit amet.</div>
+
+</div>
+
+
+
+<style>
+/*Las capas para definir el orden de ejecucion segun las propiedades que esten dentro de ellas
+    
+El orden sera de derecha a izquierda.
+No se pueden repetir el nombre de las capas.
+
+    
+Internamente el orden de las propiedades si sigue considerandose en cascada.
+*/
+    
+
+    
+    @layer capa1, capa2, capa3;
+    
+    .contenedor {
+        width: 450px;
+        height: 450px;
+        margin: 0 auto;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    @layer capa1 {
+    .cuadro {
+        width: 100px;
+        height: 100px;
+        background-color: purple;
+        color: white;
+    }
+    }
+
+    
+     @layer capa2 {
+    .cuadro {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        color: hotpink;
+    }
+    }
+    
+   /*@layer capa3 {
+    .cuadro {
+        width: 150px;
+        height: 150px;
+        background-color: blue;
+        color: lime;
+    }
+    }*/
+
+
+
+</style>
